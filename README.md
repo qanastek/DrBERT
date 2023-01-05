@@ -52,20 +52,39 @@ torch >= 1.3
 
 Download the full NACHOS dataset from [Zenodo]() and place it the the `from_scratch` or `continued_pretraining` directory.
 
-## 3.3 Build your own tokenizer from scratch based on NACHOS or use an already existing one (continued pre-training only)
+## 3.3 Build your own tokenizer from scratch based on NACHOS
+
+Note : This step is required only in the case of an from scratch pre-training, if you want to do a continued pre-training you just have to download the model and the tokenizer that correspond to the model you want to continue the training from. In this case, you simply have to go to the HuggingFace Hub, select a model (for example [RoBERTa-base](https://huggingface.co/roberta-base)). Finally, you have to download the entire model / tokenizer repository by clicking on the `Use In Transformers` button and get the Git link `git clone https://huggingface.co/roberta-base`.
 
 ddd
 
 ## 3.4 Preprocessing and tokenization of the dataset
 
-ddd
+Run `./preprocessing_dataset.sh` to generate the tokenized dataset by using the givent tokenizer.
 
-## 3.5 Model pre-training from scratch or continue pre-training
+## 3.5 Model training
 
 First, change the number of GPUs `--ntasks=128` you are needing to match your computational capabilities in the shell script called `run_training.sh`. In our case, we used 128 V100 32 GB GPUs from 32 nodes of 4 GPUs (`--ntasks-per-node=4` and `--gres=gpu:4`) during 20 hours (`--time=20:00:00`).
 
-PS: If you are using Jean Zay, you also need to change the `-A` flag to match one of your `@gpu` profile capable of running the job. You also need to move **ALL** of your datasets, tokenizer, script and outputs on the `$SCRATCH` disk space to preserve others users of suffuring of IO issues.
+If you are using Jean Zay, you also need to change the `-A` flag to match one of your `@gpu` profile capable of running the job. You also need to move **ALL** of your datasets, tokenizer, script and outputs on the `$SCRATCH` disk space to preserve others users of suffuring of IO issues.
 
+### 3.5.1 Pre-training from scratch
 
+Once the SLURM parameters updated, you have to change name of the model architecture in the flag `--model_type="camembert"` and to update the `--config_overrides=` according to the specifications of the architecture you are trying to train. In our case, RoBERTa had a `514` sequence length, a vocabulary of `32005` (32K tokens of the tokenizer and 5 of the model architecture) tokens, the identifier of the beginning-of-sentence token (BOS) and end-of-sentence token (EOS) are respectivly `5` and `6`. Change the 
 
+Then, go to `./from_scratch/` directory.
+
+Run `sbatch ./run_training.sh` to send the training job in the SLURM queue.
+
+### 3.5.2 continue pre-training
+
+Once the SLURM parameters updated, you have to change path of the model / tokenizer you want to start from `--model_name_or_path=` / `--tokenizer_name=` to the path of the model downloaded from HuggingFace's Git in the section 3.3.
+
+Then, go to `./continued_pretraining/` directory.
+
+Run `sbatch ./run_training.sh` to send the training job in the SLURM queue.
+
+# 4. Fine-tuning on a downstream task
+
+You just need to change the name of the model to `qanastek/DrBERT-7GB` in any of the examples given by HuggingFace's team [here](https://huggingface.co/docs/transformers/tasks/sequence_classification).
 
