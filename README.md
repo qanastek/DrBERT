@@ -56,7 +56,7 @@ Download the full NACHOS dataset from [Zenodo]() and place it the the `from_scra
 
 Note : This step is required only in the case of an from scratch pre-training, if you want to do a continued pre-training you just have to download the model and the tokenizer that correspond to the model you want to continue the training from. In this case, you simply have to go to the HuggingFace Hub, select a model (for example [RoBERTa-base](https://huggingface.co/roberta-base)). Finally, you have to download the entire model / tokenizer repository by clicking on the `Use In Transformers` button and get the Git link `git clone https://huggingface.co/roberta-base`.
 
-ddd
+Build the tokenizer from scratch on your data of the file `./corpus.txt` by using `./build_tokenizer.sh`.
 
 ## 3.4 Preprocessing and tokenization of the dataset
 
