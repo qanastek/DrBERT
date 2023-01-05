@@ -48,11 +48,11 @@ tensorboard==2.11.0
 torch >= 1.3
 ```
 
-## 3.2 Download NACHOS Dataset
+## 3.2 Download NACHOS Dataset text file
 
-ddd
+Download the full NACHOS dataset from [Zenodo]() and place it the the `from_scratch` or `continued_pretraining` directory.
 
-## 3.3 Build your own tokenizer from scratch based on NACHOS
+## 3.3 Build your own tokenizer from scratch based on NACHOS or use an already existing one (continued pre-training only)
 
 ddd
 
@@ -60,8 +60,12 @@ ddd
 
 ddd
 
-## 3.5 Model Pre-training
+## 3.5 Model pre-training from scratch or continue pre-training
 
-ddd
+First, change the number of GPUs `--ntasks=128` you are needing to match your computational capabilities in the shell script called `run_training.sh`. In our case, we used 128 V100 32 GB GPUs from 32 nodes of 4 GPUs (`--ntasks-per-node=4` and `--gres=gpu:4`) during 20 hours (`--time=20:00:00`).
+
+PS: If you are using Jean Zay, you also need to change the `-A` flag to match one of your `@gpu` profile capable of running the job. You also need to move **ALL** of your datasets, tokenizer, script and outputs on the `$SCRATCH` disk space to preserve others users of suffuring of IO issues.
+
+
 
 
