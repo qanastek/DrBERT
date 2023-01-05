@@ -60,6 +60,8 @@ Build the tokenizer from scratch on your data of the file `./corpus.txt` by usin
 
 ## 3.4 Preprocessing and tokenization of the dataset
 
+First, replace the field `tokenizer_path` of the shell script to match the path of your tokenizer directory downloaded before using HuggingFace Git or the one you have build.
+
 Run `./preprocessing_dataset.sh` to generate the tokenized dataset by using the givent tokenizer.
 
 ## 3.5 Model training
