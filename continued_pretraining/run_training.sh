@@ -29,7 +29,7 @@ export CUDA_LAUNCH_BLOCKING=1
 # force crashing on nccl issues like hanging broadcast
 export NCCL_ASYNC_ERROR_HANDLING=1
 
-srun -l python -u run_train_jeanzay.py \
+srun -l python -u run_training.py \
     --model_name_or_path='../data/camembert_base_hf' \
     --tokenizer_name='../data/camembert_base_hf' \
     --path_load_dataset="../data/tokenized_dataset" \
