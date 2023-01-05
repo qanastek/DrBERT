@@ -6,11 +6,11 @@ ddd
 
 **DrBERT** is a French RoBERTa trained on a open source corpus of French medical crawled textual data called NACHOS. Models with different amount of data from differents public and private sources are trained using the CNRS (French National Centre for Scientific Research) [Jean Zay](http://www.idris.fr/jean-zay/) French supercomputer. Only the weights of the models trained using exclusively open-sources data are publicly released to prevent any personnal information leak and to follow the european GDPR laws :
 
-| Model name | Corpus | Number of layers | Attention Heads | Embedding Dimension | Sequence Length |
-| :------:       | :---: |  :---: | :---: | :---: | :---: |
-| `DrBERT-7-GB-cased` | NACHOS 7 GB | 12  | 12  | 768  | 512 |
-| `DrBERT-4-GB-cased` | NACHOS 4 GB | 12  | 12  | 768  | 512 |
-| `DrBERT-4-GB-cased-CP` | NACHOS 4 GB | 12   | 12  | 768   | 512 |
+| Model name | Corpus | Number of layers | Attention Heads | Embedding Dimension | Sequence Length | Model URL |
+| :------:       | :---: |  :---: | :---: | :---: | :---: | :---: |
+| `DrBERT-7-GB-cased` | NACHOS 7 GB | 12  | 12  | 768  | 512 | [HuggingFace](https://huggingface.co/qanastek/DrBERT-7GB) |
+| `DrBERT-4-GB-cased` | NACHOS 4 GB | 12  | 12  | 768  | 512 | [HuggingFace](https://huggingface.co/qanastek/DrBERT-4GB) |
+| `DrBERT-4-GB-cased-CP` | NACHOS 4 GB | 12   | 12  | 768   | 512 | [HuggingFace](https://huggingface.co/qanastek/DrBERT-4GB-CP) |
 
 # 2. Using DrBERT
 
