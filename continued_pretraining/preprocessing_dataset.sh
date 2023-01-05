@@ -1,4 +1,4 @@
-python run_tokenizer.py \
+python preprocessing_dataset.py \
     --model_type='camembert' \
     --tokenizer_name='./Tokenizer/' \
     --train_file='../data/corpus.txt' \
