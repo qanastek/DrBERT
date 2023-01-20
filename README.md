@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/qanastek/DrBERT/main/assets/logo.png?token=GHSAT0AAAAAABHLV2DMY6ZHXE3Y32C7OSO4Y6KXGIQ" alt="drawing" width="250"/>
+</p>
+
 # DrBERT: A Robust Pre-trained Model in French for Biomedical and Clinical domains
 
 In recent years, pre-trained language models (PLMs) achieve the best performance on a wide range of natural language processing (NLP) tasks. While the first models were trained on general domain data, specialized ones have emerged to more effectively treat specific domains. 
