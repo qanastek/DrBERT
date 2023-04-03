@@ -14,9 +14,9 @@ Finally, we release the first specialized PLMs for the biomedical field in Frenc
 
 | Model name | Corpus | Number of layers | Attention Heads | Embedding Dimension | Sequence Length | Model URL |
 | :------:       | :---: |  :---: | :---: | :---: | :---: | :---: |
-| `DrBERT-7-GB-cased` | NACHOS 7 GB | 12  | 12  | 768  | 512 | [HuggingFace](https://huggingface.co/qanastek/DrBERT-7GB) |
-| `DrBERT-4-GB-cased` | NACHOS 4 GB | 12  | 12  | 768  | 512 | [HuggingFace](https://huggingface.co/qanastek/DrBERT-4GB) |
-| `DrBERT-4-GB-cased-CP` | NACHOS 4 GB | 12   | 12  | 768   | 512 | [HuggingFace](https://huggingface.co/qanastek/DrBERT-4GB-CP) |
+| `DrBERT-7-GB-cased` | NACHOS 7 GB | 12  | 12  | 768  | 512 | [HuggingFace](https://huggingface.co/Dr-BERT/DrBERT-7GB) |
+| `DrBERT-4-GB-cased` | NACHOS 4 GB | 12  | 12  | 768  | 512 | [HuggingFace](https://huggingface.co/Dr-BERT/DrBERT-4GB) |
+| `DrBERT-4-GB-cased-CP` | NACHOS 4 GB | 12   | 12  | 768   | 512 | [HuggingFace](https://huggingface.co/Dr-BERT/DrBERT-4GB-CP) |
 
 # 2. Using DrBERT
 
@@ -27,8 +27,8 @@ Loading the model and tokenizer :
 ```python
 from transformers import AutoModel, AutoTokenizer
 
-tokenizer = AutoTokenizer.from_pretrained("qanastek/DrBERT-7GB")
-model = AutoModel.from_pretrained("qanastek/DrBERT-7GB")
+tokenizer = AutoTokenizer.from_pretrained("Dr-BERT/DrBERT-7GB")
+model = AutoModel.from_pretrained("Dr-BERT/DrBERT-7GB")
 ```
 
 Perform the mask filling task :
@@ -36,7 +36,7 @@ Perform the mask filling task :
 ```python
 from transformers import pipeline 
 
-fill_mask  = pipeline("fill-mask", model="qanastek/DrBERT-7GB", tokenizer="qanastek/DrBERT-7GB")
+fill_mask  = pipeline("fill-mask", model="Dr-BERT/DrBERT-7GB", tokenizer="Dr-BERT/DrBERT-7GB")
 results = fill_mask("La patiente est atteinte d'une <mask>")
 ```
 
@@ -94,5 +94,5 @@ Run `sbatch ./run_training.sh` to send the training job in the SLURM queue.
 
 # 4. Fine-tuning on a downstream task
 
-You just need to change the name of the model to `qanastek/DrBERT-7GB` in any of the examples given by HuggingFace's team [here](https://huggingface.co/docs/transformers/tasks/sequence_classification).
+You just need to change the name of the model to `Dr-BERT/DrBERT-7GB` in any of the examples given by HuggingFace's team [here](https://huggingface.co/docs/transformers/tasks/sequence_classification).
 
