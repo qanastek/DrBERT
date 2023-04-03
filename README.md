@@ -16,7 +16,8 @@ Finally, we release the first specialized PLMs for the biomedical field in Frenc
 | :------:       | :---: |  :---: | :---: | :---: | :---: | :---: |
 | `DrBERT-7-GB-cased` | NACHOS 7 GB | 12  | 12  | 768  | 512 | [HuggingFace](https://huggingface.co/Dr-BERT/DrBERT-7GB) |
 | `DrBERT-4-GB-cased` | NACHOS 4 GB | 12  | 12  | 768  | 512 | [HuggingFace](https://huggingface.co/Dr-BERT/DrBERT-4GB) |
-| `DrBERT-4-GB-cased-CP` | NACHOS 4 GB | 12   | 12  | 768   | 512 | [HuggingFace](https://huggingface.co/Dr-BERT/DrBERT-4GB-CP) |
+| `DrBERT-4-GB-cased-CP-CamemBERT` | NACHOS 4 GB | 12   | 12  | 768   | 512 | [HuggingFace](https://huggingface.co/Dr-BERT/DrBERT-4GB-CP-CamemBERT) |
+| `DrBERT-4-GB-cased-CP-PubMedBERT` | NACHOS 4 GB | 12   | 12  | 768   | 512 | [HuggingFace](https://huggingface.co/Dr-BERT/DrBERT-4GB-CP-PubMedBERT) |
 
 # 2. Using DrBERT
 
