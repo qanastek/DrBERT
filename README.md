@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/qanastek/DrBERT/main/assets/logo.png?token=GHSAT0AAAAAABHLV2DMY6ZHXE3Y32C7OSO4Y6KXGIQ" alt="drawing" width="250"/>
+  <img src="https://github.com/qanastek/DrBERT/blob/main/assets/logo.png?raw=true" alt="drawing" width="250"/>
 </p>
 
 # DrBERT: A Robust Pre-trained Model in French for Biomedical and Clinical domains
