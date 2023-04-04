@@ -97,3 +97,16 @@ Run `sbatch ./run_training.sh` to send the training job in the SLURM queue.
 
 You just need to change the name of the model to `Dr-BERT/DrBERT-7GB` in any of the examples given by HuggingFace's team [here](https://huggingface.co/docs/transformers/tasks/sequence_classification).
 
+# Citation BibTeX
+
+```bibtex
+@misc{labrak2023drbert,
+      title={DrBERT: A Robust Pre-trained Model in French for Biomedical and Clinical domains}, 
+      author={Yanis Labrak and Adrien Bazoge and Richard Dufour and Mickael Rouvier and Emmanuel Morin and Béatrice Daille and Pierre-Antoine Gourraud},
+      year={2023},
+      eprint={2304.00958},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+
