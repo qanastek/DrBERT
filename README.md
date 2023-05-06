@@ -100,13 +100,16 @@ You just need to change the name of the model to `Dr-BERT/DrBERT-7GB` in any of 
 # Citation BibTeX
 
 ```bibtex
-@misc{labrak2023drbert,
-      title={DrBERT: A Robust Pre-trained Model in French for Biomedical and Clinical domains}, 
-      author={Yanis Labrak and Adrien Bazoge and Richard Dufour and Mickael Rouvier and Emmanuel Morin and Béatrice Daille and Pierre-Antoine Gourraud},
-      year={2023},
-      eprint={2304.00958},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{labrak2023drbert,
+    title = "DrBERT: A Robust Pre-trained Model in French for Biomedical and Clinical domains",
+    author = "Yanis, Labrak and Adrien, Bazoge and Richard, Dufour and Mickael, Rouvier and Emmanuel, Morin and Béatrice, Daille and Pierre-Antoine, Gourraud",
+    booktitle = "Proceedings of the 61th Annual Meeting of the Association for Computational Linguistics (ACL'23), Long Paper",
+    month = july,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    abstract = "In recent years, pre-trained language models (PLMs) achieve the best performance on a wide range of natural language processing (NLP) tasks. While the first models were trained on general domain data, specialized ones have emerged to more effectively treat specific domains. In this paper, we propose an original study of PLMs in the medical domain on French language. We compare, for the first time, the performance of PLMs trained on both public data from the web and private data from healthcare establishments. We also evaluate different learning strategies on a set of biomedical tasks. In particular, we show that we can take advantage of already existing biomedical PLMs in a foreign language by further pre-train it on our targeted data. Finally, we release the first specialized PLMs for the biomedical field in French, called DrBERT, as well as the largest corpus of medical data under free license on which these models are trained.",
 }
+```
 
 
