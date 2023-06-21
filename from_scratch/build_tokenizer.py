@@ -1,7 +1,7 @@
 import sentencepiece as spm
 
 spm.SentencePieceTrainer.train(
-	input='../data/corpus.txt',
+	input='./data/corpus.txt',
    model_type='bpe',
 	model_prefix='Tokenizer', 
 	vocab_size=32000,
