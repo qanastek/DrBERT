@@ -12,7 +12,7 @@ spm.SentencePieceTrainer.train(
 
 from transformers import AutoTokenizer
 
-input_tokenizer_path = "./"
+input_tokenizer_path = "./Tokenizer.model"
 output_tokenizer_path = "./Tokenizer"
 
 tokenizer = AutoTokenizer(vocab_file=input_tokenizer_path, max_len=512)
