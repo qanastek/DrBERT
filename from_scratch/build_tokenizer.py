@@ -10,6 +10,7 @@ spm.SentencePieceTrainer.train(
 	)
 
 
+import subprocess
 from transformers import AutoTokenizer
 
 input_tokenizer_path = "./Tokenizer.model"
@@ -18,6 +19,8 @@ output_tokenizer_path = "./Tokenizer"
 tokenizer = AutoTokenizer(vocab_file=input_tokenizer_path, max_len=512)
 
 tokenizer.save_pretrained(output_tokenizer_path)
+
+subprocess.run(["mv", "Tokenizer.vocab", output_tokenizer_path]) 
 
 
 
