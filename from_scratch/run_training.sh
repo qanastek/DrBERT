@@ -33,7 +33,7 @@ srun -l python -u run_train_jeanzay.py \
     --model_type='camembert' \
     --config_overrides="max_position_embeddings=514,type_vocab_size=1,vocab_size=32005,bos_token_id=5,eos_token_id=6" \
     --tokenizer_name='./Tokenizer/' \
-    --path_load_dataset="../data/tokenized_dataset" \
+    --path_load_dataset="./data/tokenized_dataset" \
     --output_dir='./Model_output/' \
     --logging_dir='./Model_output/logs/' \
     --per_device_train_batch_size=32 \
