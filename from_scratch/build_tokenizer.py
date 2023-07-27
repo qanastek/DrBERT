@@ -11,12 +11,12 @@ spm.SentencePieceTrainer.train(
 
 
 import subprocess
-from transformers import AutoTokenizer
+from transformers import RobertaTokenizerFast
 
 input_tokenizer_path = "./Tokenizer.model"
 output_tokenizer_path = "./Tokenizer"
 
-tokenizer = AutoTokenizer(vocab_file=input_tokenizer_path, max_len=512)
+tokenizer = RobertaTokenizerFast(vocab_file=input_tokenizer_path, max_len=512)
 
 tokenizer.save_pretrained(output_tokenizer_path)
 
