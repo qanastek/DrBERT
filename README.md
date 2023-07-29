@@ -46,13 +46,14 @@ results = fill_mask("La patiente est atteinte d'une <mask>")
 ## 3.1 Install dependencies
 
 ```bash
-accelerate @ git+https://github.com/huggingface/accelerate@66edfe103a0de9607f9b9fdcf6a8e2132486d99b
-datasets==2.6.1
-sentencepiece==0.1.97
-protobuf==3.20.1
-evaluate==0.2.2
-tensorboard==2.11.0
-torch >= 1.3
+pip install accelerate@git+https://github.com/huggingface/accelerate@66edfe103a0de9607f9b9fdcf6a8e2132486d99b
+pip install datasets==2.6.1
+pip install sentencepiece==0.1.97
+pip install protobuf==3.20.1
+pip install evaluate==0.2.2
+pip install tensorboard==2.11.0
+pip install torch >= 1.3
+pip install transformers==4.24.0
 ```
 
 ## 3.2 Download NACHOS Dataset text file
