@@ -46,7 +46,7 @@ results = fill_mask("La patiente est atteinte d'une <mask>")
 ## 3.1 Install dependencies
 
 ```bash
-pip install accelerate@git+https://github.com/huggingface/accelerate@66edfe103a0de9607f9b9fdcf6a8e2132486d99b
+pip install accelerate==0.12.0
 pip install datasets==2.6.1
 pip install sentencepiece==0.1.97
 pip install protobuf==3.20.1
