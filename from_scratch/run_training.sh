@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=mlm_chub     # nom du job
+#SBATCH --job-name=mlm_drbert     # nom du job
 #SBATCH --constraint=v100-32g
 #SBATCH --ntasks=128                   # nombre total de tache MPI (= nombre total de GPU)
 #SBATCH --ntasks-per-node=4          # nombre de tache MPI par noeud (= nombre de GPU par noeud)
